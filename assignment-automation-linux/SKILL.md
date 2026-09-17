@@ -1,5 +1,6 @@
 ---
 name: assignment-automation-linux
+version: 1.0
 description: Generates a Linux bash automation script to solve assignments, capture terminal screenshots, and compile a LaTeX PDF report.
 ---
 
