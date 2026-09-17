@@ -1,6 +1,6 @@
 ---
 name: assignment-automation-linux
-version: 1.0
+version: 2.0
 description: Generates a Linux bash automation script to solve assignments, capture terminal screenshots, and compile a LaTeX PDF report.
 ---
 
@@ -25,6 +25,10 @@ Write one single bash file that writes all the assignment problem files to the d
 - Use simple and standard data types (e.g., `int`, `char`, `double`) unless the assignment problem explicitly requires complex or custom types.
 - Keep function names and variable names concise and short (e.g., combining simple topic/context abbreviations).
 - Do not add arbitrary padding spaces or extra decorative spacing inside code declarations unless necessary.
+
+## Report Writing Rules
+- Strictly follow the given latex template to create the report.
+- Just write the code and the output screenshots in the report.
 
 ## Bash Script Template
 
@@ -244,6 +248,63 @@ echo -e "${GREEN}============================================${NC}"
 if [ -n "$XVFB_PID" ]; then
     kill "$XVFB_PID" 2>/dev/null
 fi
+```
+
+## Latex Report Template
+
+```tex
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{float}
+
+\lstset{
+    language=C++,
+    basicstyle=\ttfamily\small,
+    frame=single,
+    breaklines=true,
+    showstringspaces=false
+}
+
+\begin{document}
+
+\begin{titlepage}
+    \centering
+    {\Large \textbf{Indian Institute of Information Technology Vadodara - International Campus, Diu}}\\[1.3cm]
+    \includegraphics[width=8cm]{/home/snatcha/CONSTANTS/institute_logo.png}\\[1.3cm]
+    {\Large \textbf{\underline{<ASSIGNMENT_TITLE>}}}\\[2cm]
+    \begin{flushleft}
+    \large
+    \textbf{Name:} Ishant Yadav \\[0.2cm]
+    \textbf{Roll Number:} 202411044 \\[0.2cm]
+    \textbf{Branch:} Computer Science and Engineering \\[0.2cm]
+    \textbf{Batch:} 2024 \\[0.2cm]
+    \textbf{Section:} A \\[0.2cm]
+    \textbf{Session:} 2025-26
+    \end{flushleft}
+    \vfill
+\end{titlepage}
+
+\section*{1. 01\_problem.cpp}
+\lstinputlisting{01_problem.cpp}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{1.png}
+\end{figure;
+
+\section*{2. 02\_problem.cpp}
+\lstinputlisting{02_problem.cpp}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{2.png}
+\end{figure}
+
+\end{document}
 ```
 
 ## Edge Cases
