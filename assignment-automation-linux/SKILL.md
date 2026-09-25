@@ -17,6 +17,9 @@ Take the given assignment in text format, or in an attached PDF, photo, or any o
 Write one single bash file that writes all the assignment problem files to the disk, compiles and runs them, captures screenshots of the output using the provided template, saves them in a directory, and creates a `.tex` file using the exact LaTeX title page and report template with the gathered user details.
 
 ## Code Generation & Coding Rules
+- Only solve problems given in the assignment.
+- Write simple and lesser code.
+- Try to keep small number of files only as much as needed.
 - Do not write comments in the generated code files unless specifically instructed by the assignment prompt. If comments are explicitly required:
   - Write comments strictly in lowercase english alphabets.
   - Use arrows and symbols (e.g., `->`) to explain mathematical steps and logic transitions.
